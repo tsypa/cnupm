@@ -1,0 +1,77 @@
+aggr_port.o: aggr_port.c /usr/include/sys/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/endian.h /usr/include/sys/_endian.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/machine/endian.h /usr/include/sys/select.h \
+  /usr/include/sys/time.h /usr/include/time.h /usr/include/sys/_time.h \
+  /home/tm/workspace/cnupm-3.12/cnupm/../include/sys/tree.h \
+  /usr/include/errno.h /usr/include/sys/errno.h /usr/include/limits.h \
+  /usr/include/sys/limits.h /usr/include/machine/limits.h \
+  /usr/include/sys/syslimits.h /usr/include/stdlib.h aggregate.h
+cnupm.o: cnupm.c /usr/include/sys/param.h /usr/include/sys/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/endian.h /usr/include/sys/_endian.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/machine/endian.h /usr/include/sys/select.h \
+  /usr/include/sys/time.h /usr/include/time.h /usr/include/sys/_time.h \
+  /usr/include/sys/syslimits.h /usr/include/sys/signal.h \
+  /usr/include/machine/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/sys/limits.h /usr/include/machine/limits.h \
+  /usr/include/machine/param.h /usr/include/sys/socket.h \
+  /usr/include/sys/stat.h /usr/include/sys/wait.h \
+  /usr/include/netinet/in.h /usr/include/netinet6/in6.h \
+  /usr/include/err.h /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/include/fcntl.h /usr/include/login_cap.h /usr/include/pcap.h \
+  /usr/include/net/bpf.h /usr/include/stdio.h /usr/include/signal.h \
+  /usr/include/stdlib.h /usr/include/string.h /usr/include/syslog.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /home/tm/workspace/cnupm-3.12/cnupm/../include/cnupm.h \
+  /usr/include/pwd.h \
+  /home/tm/workspace/cnupm-3.12/cnupm/../include/inet6.h \
+  /home/tm/workspace/cnupm-3.12/cnupm/../include/collect.h datalinks.h \
+  aggregate.h
+collect.o: collect.c /usr/include/sys/param.h /usr/include/sys/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/endian.h /usr/include/sys/_endian.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/machine/endian.h /usr/include/sys/select.h \
+  /usr/include/sys/time.h /usr/include/time.h /usr/include/sys/_time.h \
+  /usr/include/sys/syslimits.h /usr/include/sys/signal.h \
+  /usr/include/machine/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/sys/limits.h /usr/include/machine/limits.h \
+  /usr/include/machine/param.h /usr/include/sys/socket.h \
+  /home/tm/workspace/cnupm-3.12/cnupm/../include/sys/tree.h \
+  /usr/include/netinet/in.h /usr/include/netinet6/in6.h \
+  /usr/include/netinet/in_systm.h /usr/include/netinet/ip.h \
+  /usr/include/netinet/ip6.h /usr/include/netinet/tcp.h \
+  /usr/include/netinet/udp.h /usr/include/errno.h \
+  /usr/include/sys/errno.h /usr/include/fcntl.h /usr/include/stdio.h \
+  /usr/include/stdlib.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /home/tm/workspace/cnupm-3.12/cnupm/../include/cnupm.h \
+  /usr/include/pwd.h \
+  /home/tm/workspace/cnupm-3.12/cnupm/../include/inet6.h \
+  /home/tm/workspace/cnupm-3.12/cnupm/../include/collect.h aggregate.h
+datalinks.o: datalinks.c /usr/include/sys/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/endian.h /usr/include/sys/_endian.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/machine/endian.h /usr/include/sys/select.h \
+  /usr/include/sys/time.h /usr/include/time.h /usr/include/sys/_time.h \
+  /usr/include/sys/socket.h /usr/include/net/if.h \
+  /usr/include/net/if_arp.h /usr/include/net/if_pflog.h \
+  /usr/include/net/pfvar.h /usr/include/sys/param.h \
+  /usr/include/sys/syslimits.h /usr/include/sys/signal.h \
+  /usr/include/machine/signal.h /usr/include/sys/siginfo.h \
+  /usr/include/sys/limits.h /usr/include/machine/limits.h \
+  /usr/include/machine/param.h /usr/include/sys/queue.h \
+  /home/tm/workspace/cnupm-3.12/cnupm/../include/sys/tree.h \
+  /usr/include/sys/rwlock.h /usr/include/net/radix.h \
+  /usr/include/net/route.h /usr/include/netinet/ip_ipsp.h \
+  /usr/include/sys/timeout.h /usr/include/netinet/in.h \
+  /usr/include/netinet6/in6.h /usr/include/netinet/tcp_fsm.h \
+  /usr/include/netinet/in_systm.h /usr/include/netinet/ip.h \
+  /usr/include/pcap.h /usr/include/net/bpf.h /usr/include/stdio.h \
+  /home/tm/workspace/cnupm-3.12/cnupm/../include/cnupm.h \
+  /usr/include/pwd.h \
+  /home/tm/workspace/cnupm-3.12/cnupm/../include/inet6.h datalinks.h \
+  /home/tm/workspace/cnupm-3.12/cnupm/../include/collect.h

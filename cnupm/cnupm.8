@@ -1,0 +1,196 @@
+.\" $RuOBSD: cnupm.8,v 1.18 2008/02/01 17:59:03 form Exp $
+.\"
+.\" Copyright (c) 2003-2005 Oleg Safiullin <form@pdp-11.org.ru>
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice unmodified, this list of conditions, and the following
+.\"    disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+.\" SUCH DAMAGE.
+.\"
+.Dd May 16, 2003
+.Dt CNUPM 8
+.Os
+.Sh NAME
+.Nm cnupm
+.Nd IP/IPv6 traffic collector
+.Sh SYNOPSIS
+.Nm cnupm
+.Op Fl dDekNOpPqV
+.Op Fl a Ar interval
+.Oo Fl A Ar portrange
+.Ns Op : Ns Ar port
+.Ns Oo , Ns Ar ... Oc Oc
+.Op Fl f Ar family
+.Op Fl F Ar file
+.Op Fl i Ar interface
+.Op Fl m Ar maxentries
+.Op Fl t Ar dir
+.Op Fl u Ar user
+.Op Ar expression
+.Sh DESCRIPTION
+The
+.Nm
+is an IP/IPv6 traffic collector daemon; it listens on a network
+interface for IP/IPv6 packets that match the boolean
+.Ar expression
+(see
+.Xr tcpdump 8
+for more information) and collects the following statistics:
+.Pp
+.Bl -bullet -compact
+.It
+address family (INET/INET6)
+.It
+IP/IPv6 protocol number
+.It
+source IP/IPv6 address
+.It
+source TCP/UDP port
+.It
+destination IP/IPv6 address
+.It
+destination TCP/UDP port
+.It
+total number of bytes trasferred
+.El
+.Pp
+Kernel must be compiled with
+.Xr bpf 4
+(Berkeley Packet Filter) support.
+.Pp
+The options are follows:
+.Bl -tag -width Ds
+.It Fl a Ar interval
+Dump traffic to file every
+.Ar interval
+minutes.
+.It Fl A Xo
+.Ar portrange Ns Op : Ns Ar port Ns
+.Op , Ns Ar ...
+.Xc
+Aggregate ports in range
+.Ar portrange
+including boundaries as
+.Ar port .
+If
+.Ar port
+is not specified or equals to zero, aggregation of specified ports
+doesn't take place.
+The shortest interval takes precedence if ranges overlap.
+For example, in this statement:
+.Pp
+.Dl -A 1024-49151:1024,3128,6667-6669
+.Pp
+ports from 1024 till 49151 are counted as 1024, while port 3128 and
+ports in range 6667-6669 are not aggregated and treated as they are.
+.It Fl d
+Do not daemonize
+.Nm cnupm ,
+log messages to stderr.
+.It Fl D
+Use daily dump files.
+.It Fl e
+Create an entry in traffic dump file even if no traffic collected.
+.It Fl f Ar family
+Collect packets of specified address
+.Ar family
+(inet/inet6) only.
+.It Fl F Ar file
+Use file as input for the filter expression.
+Any additional expressions given on the command line are ignored.
+.It Fl i Ar interface
+Listen on
+.Ar interface .
+If unspecified,
+.Nm
+searches the system interface list for the lowest numbered,
+configured
+.Dq up
+interface (excluding loopback).
+.It Fl k
+Fork
+.Nm cnupm
+to dump traffic to file.
+.It Fl m Ar maxentries
+Keep up to
+.Ar maxentries
+traffic entries in memory.
+The default value is 5000.
+.It Fl N
+Do not collect protocol statistics.
+This option also disables collection of TCP/UDP ports statistics.
+.It Fl O
+Do not run the packet-matching code optimizer.
+This is useful only if you suspect a bug in the optimizer.
+.It Fl p
+Do not put the interface into promiscuous mode.
+.It Fl P
+Do not collect TCP/UDP ports statistics.
+.It Fl q
+Do not log dumped records count.
+.It Fl t Ar dir
+Chroot to
+.Ar dir
+instead of
+.Nm cnupm
+user's home directory.
+.It Fl u Ar user
+Switch user context to specified user instead of default
+.Sq cnupm .
+.It Fl V
+Print program version and features and exit.
+.El
+.Sh SIGNALS
+The following signals recognized by
+.Nm cnupm :
+.Pp
+.Bl -tag -width "SIGINT, SIGQUIT, SIGTERM"
+.It Pa SIGINFO, SIGUSR1
+Log number of received, dropped and lost packets.
+.It Pa SIGHUP
+Save collected traffic statistics to a dump file.
+.It Pa SIGINT, SIGQUIT, SIGTERM
+Log number of received and dropped packets, save collected
+statistics to a dump file and exit.
+.El
+.Sh AUTHORS
+The
+.Nm
+program was written by
+.An Oleg Safiullin Aq form@pdp-11.org.ru
+.Sh BUGS
+Sure ;)
+.Sh FILES
+.Bl -tag -width ~cnupm/cnupm-netifX-yyyymmdd.dump -compact
+.It Pa ~cnupm/cnupm-netifX.pid
+process ID of running
+.Nm
+listening on netifX.
+.It Pa ~cnupm/cnupm-netifX.dump
+traffic dump file for netifX.
+.It Pa ~cnupm/cnupm-netifX-yyyymmdd.dump
+daily traffic dump file for netifX.
+.El
+.Sh SEE ALSO
+.Xr pcap 3 ,
+.Xr bpf 4 ,
+.Xr cnupmstat 8 ,
+.Xr tcpdump 8

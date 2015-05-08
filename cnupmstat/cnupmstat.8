@@ -1,0 +1,125 @@
+.\" $RuOBSD: cnupmstat.8,v 1.8 2008/02/01 17:59:03 form Exp $
+.\"
+.\" Copyright (c) 2003 Oleg Safiullin <form@pdp-11.org.ru>
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice unmodified, this list of conditions, and the following
+.\"    disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+.\" SUCH DAMAGE.
+.\"
+.Dd May 16, 2003
+.Dt CNUPMSTAT 8
+.Os
+.Sh NAME
+.Nm cnupmstat
+.Nd print traffic statistics collected by
+.Xr cnupm 8
+.Sh SYNOPSIS
+.Nm cnupmstat
+.Op Fl BEFnNPV
+.Op Fl d Ar delim
+.Op Fl D Ar date
+.Op Fl f Ar family
+.Op Fl p Ar protocol
+.Op Fl t Ar dir
+.Op Fl u Ar user
+.Ar interface
+.Op Ar ...
+.Sh DESCRIPTION
+The
+.Nm
+prints traffic statistics collected by
+.Xr cnupm 8
+for specified network interfaces.
+Traffic statistics is printed in the following format:
+
+.Aq beg_date
+.Aq end_date
+.Aq src_addr
+.Aq dst_addr
+.Aq ip_proto
+.Aq nbytes
+
+
+The options are follows:
+.Bl -tag -width Ds
+.It Fl B
+Do not print start of collecting date and time.
+.It Fl d Ar delim
+Use
+.Ar delim
+as the field delimiter character instead of space.
+.It Fl D Ar date
+Use daily dump file for selected date.
+Date can be specified as yyyy-mm-dd, mm/dd/yyyy, dd.mm.yyyy,
+.Sq today ,
+or
+.Sq yesterday .
+.It Fl E
+Do not print end of collecting date and time.
+.It Fl f Ar family
+Print traffic statistics for the specified
+.Ar family
+only.
+.It Fl F
+Treat command line arguments as file names, not network interface names.
+.It Fl n
+Print IP/IPv6 protocol in numeric format.
+.It Fl N
+Do not print IP/IPv6 protocol.
+.It Fl p Ar protocol
+Print traffic statistics for the specified
+.Ar protocol
+only.
+.It Fl P
+Do not print TCP/UDP port numbers.
+.It Fl t Ar dir
+Use
+.Ar dir
+instead of
+.Nm cnupm
+user's home directory.
+.It Fl u Ar user
+Use home directory of
+.Ar user
+to look for dump files.
+By default user
+.Sq cnupm
+is used.
+.It Fl V
+Print program version and features and exit.
+.El
+.Sh AUTHORS
+The
+.Nm
+program was written by
+.An Oleg Safiullin Aq form@pdp-11.org.ru
+.Sh BUGS
+Sure ;)
+.Sh FILES
+.Bl -tag -width ~cnupm/cnupm-netifX-yyyymmdd.dump -compact
+.It Pa ~cnupm/cnupm-netifX.dump
+traffic dump file for netifX.
+.It Pa ~cnupm/cnupm-netifX-yyyymmdd.dump
+daily traffic dump file for netifX.
+.El
+.Sh SEE ALSO
+.Xr cnupm 8

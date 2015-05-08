@@ -1,0 +1,20 @@
+/GNUmakefile/1.2/Thu Apr 22 03:17:58 2004//TCNUPM_3_12
+/Makefile/1.1/Sat Apr 24 03:58:39 2004//TCNUPM_3_12
+/cnupm_daemon.c/1.2/Thu Apr 22 03:17:58 2004//TCNUPM_3_12
+/cnupm_family.c/1.2/Thu Apr 22 03:17:58 2004//TCNUPM_3_12
+/cnupm_pidfile.c/1.2/Thu Apr 22 03:17:58 2004//TCNUPM_3_12
+/cnupm_progname.c/1.3/Mon Apr 11 17:04:31 2005//TCNUPM_3_12
+/cnupm_protocol.c/1.1/Mon Apr 19 12:53:42 2004//TCNUPM_3_12
+/cnupm_restrict.c/1.3/Wed Dec 21 18:21:22 2005//TCNUPM_3_12
+/cnupm_ulval.c/1.3/Tue Apr 20 08:27:27 2004//TCNUPM_3_12
+/cnupm_version.c/1.1/Mon Apr 19 12:53:43 2004//TCNUPM_3_12
+/err.c/1.1/Mon Apr 19 12:53:43 2004//TCNUPM_3_12
+/errx.c/1.1/Mon Apr 19 12:53:43 2004//TCNUPM_3_12
+/inet_ntop.c/1.1/Thu Apr 22 03:17:58 2004//TCNUPM_3_12
+/setproctitle.c/1.3/Mon Apr 11 17:04:31 2005//TCNUPM_3_12
+/snprintf.c/1.1/Mon Apr 19 12:53:43 2004//TCNUPM_3_12
+/strlcat.c/1.1/Mon Apr 19 12:53:43 2004//TCNUPM_3_12
+/strlcpy.c/1.1/Mon Apr 19 12:53:43 2004//TCNUPM_3_12
+/warn.c/1.1/Mon Apr 19 12:53:43 2004//TCNUPM_3_12
+/warnx.c/1.1/Mon Apr 19 12:53:43 2004//TCNUPM_3_12
+D

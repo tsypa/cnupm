@@ -1,0 +1,88 @@
+cnupm_daemon.o cnupm_daemon.go cnupm_daemon.po cnupm_daemon.so cnupm_daemon.do: cnupm_daemon.c /usr/include/sys/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/endian.h /usr/include/sys/_endian.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/machine/endian.h /usr/include/sys/select.h \
+  /usr/include/sys/time.h /usr/include/time.h /usr/include/sys/_time.h \
+  /usr/include/login_cap.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h \
+  /home/tm/workspace/cnupm-3.12/libcnupm/../include/cnupm.h \
+  /usr/include/pwd.h
+cnupm_family.o cnupm_family.go cnupm_family.po cnupm_family.so cnupm_family.do: cnupm_family.c /usr/include/sys/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/endian.h /usr/include/sys/_endian.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/machine/endian.h /usr/include/sys/select.h \
+  /usr/include/sys/time.h /usr/include/time.h /usr/include/sys/_time.h \
+  /usr/include/sys/socket.h /usr/include/string.h \
+  /home/tm/workspace/cnupm-3.12/libcnupm/../include/cnupm.h \
+  /usr/include/pwd.h \
+  /home/tm/workspace/cnupm-3.12/libcnupm/../include/inet6.h
+cnupm_pidfile.o cnupm_pidfile.go cnupm_pidfile.po cnupm_pidfile.so cnupm_pidfile.do: cnupm_pidfile.c /usr/include/sys/param.h \
+  /usr/include/sys/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/endian.h \
+  /usr/include/sys/_endian.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/machine/endian.h \
+  /usr/include/sys/select.h /usr/include/sys/time.h /usr/include/time.h \
+  /usr/include/sys/_time.h /usr/include/sys/syslimits.h \
+  /usr/include/sys/signal.h /usr/include/machine/signal.h \
+  /usr/include/sys/siginfo.h /usr/include/sys/limits.h \
+  /usr/include/machine/limits.h /usr/include/machine/param.h \
+  /usr/include/errno.h /usr/include/sys/errno.h /usr/include/limits.h \
+  /usr/include/signal.h /usr/include/stdarg.h /usr/include/stdio.h \
+  /usr/include/stdlib.h /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /home/tm/workspace/cnupm-3.12/libcnupm/../include/cnupm.h \
+  /usr/include/pwd.h
+cnupm_progname.o cnupm_progname.go cnupm_progname.po cnupm_progname.so cnupm_progname.do: cnupm_progname.c /usr/include/sys/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/endian.h /usr/include/sys/_endian.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/machine/endian.h /usr/include/sys/select.h \
+  /usr/include/sys/time.h /usr/include/time.h /usr/include/sys/_time.h \
+  /home/tm/workspace/cnupm-3.12/libcnupm/../include/cnupm.h \
+  /usr/include/pwd.h
+cnupm_protocol.o cnupm_protocol.go cnupm_protocol.po cnupm_protocol.so cnupm_protocol.do: cnupm_protocol.c /usr/include/sys/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/endian.h /usr/include/sys/_endian.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/machine/endian.h /usr/include/sys/select.h \
+  /usr/include/sys/time.h /usr/include/time.h /usr/include/sys/_time.h \
+  /usr/include/errno.h /usr/include/sys/errno.h /usr/include/netdb.h \
+  /usr/include/sys/param.h /usr/include/sys/syslimits.h \
+  /usr/include/sys/signal.h /usr/include/machine/signal.h \
+  /usr/include/sys/siginfo.h /usr/include/sys/limits.h \
+  /usr/include/machine/limits.h /usr/include/machine/param.h \
+  /usr/include/netinet/in.h /usr/include/netinet6/in6.h \
+  /home/tm/workspace/cnupm-3.12/libcnupm/../include/cnupm.h \
+  /usr/include/pwd.h
+cnupm_restrict.o cnupm_restrict.go cnupm_restrict.po cnupm_restrict.so cnupm_restrict.do: cnupm_restrict.c /usr/include/sys/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/endian.h /usr/include/sys/_endian.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/machine/endian.h /usr/include/sys/select.h \
+  /usr/include/sys/time.h /usr/include/time.h /usr/include/sys/_time.h \
+  /usr/include/login_cap.h /usr/include/syslog.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h \
+  /home/tm/workspace/cnupm-3.12/libcnupm/../include/cnupm.h \
+  /usr/include/pwd.h
+cnupm_ulval.o cnupm_ulval.go cnupm_ulval.po cnupm_ulval.so cnupm_ulval.do: cnupm_ulval.c /usr/include/sys/types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/cdefs.h \
+  /usr/include/sys/endian.h /usr/include/sys/_endian.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/machine/endian.h /usr/include/sys/select.h \
+  /usr/include/sys/time.h /usr/include/time.h /usr/include/sys/_time.h \
+  /usr/include/errno.h /usr/include/sys/errno.h /usr/include/limits.h \
+  /usr/include/sys/limits.h /usr/include/machine/limits.h \
+  /usr/include/sys/syslimits.h /usr/include/stdlib.h \
+  /home/tm/workspace/cnupm-3.12/libcnupm/../include/cnupm.h \
+  /usr/include/pwd.h
+cnupm_version.o cnupm_version.go cnupm_version.po cnupm_version.so cnupm_version.do: cnupm_version.c /usr/include/pcap.h \
+  /usr/include/sys/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/cdefs.h /usr/include/sys/endian.h \
+  /usr/include/sys/_endian.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/machine/endian.h \
+  /usr/include/sys/select.h /usr/include/sys/time.h /usr/include/time.h \
+  /usr/include/sys/_time.h /usr/include/net/bpf.h /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /home/tm/workspace/cnupm-3.12/libcnupm/../include/cnupm.h \
+  /usr/include/pwd.h
